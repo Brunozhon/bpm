@@ -1,3 +1,4 @@
+import os
 def bpm_install(filename, crfilename):
   try:
     fil = open(filename + ".js", "r")  # Every BPM file is a javascript file, so add .js to the end
@@ -13,3 +14,8 @@ def bpm_install(filename, crfilename):
       print("Varible 'fil' or 'f' is not defined")
     except:
       print("Something else went wrong, but it's not a NameError")
+def bpm_remove(filename):
+  if os.path.exists(filename):
+    os.remove(filename)
+  else:
+    print("The file you asked for does not exsist")
