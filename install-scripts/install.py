@@ -1,8 +1,8 @@
 import os
 def bpm_install(filename, crfilename):
   try:
-    fil = open(filename + ".js", "r")  # Every BPM file is a javascript file, so add .js to the end
-    f = open(crfilename + ".js", "w")  # Sets a file to writing mode
+    fil = open(filename, "r")  # Every BPM file is a javascript file, so add .js to the end
+    f = open(crfilename, "w")  # Sets a file to writing mode
     f.write(fil.read())  # Write the readed file
   except:
     print("Failed to open file(s)")
